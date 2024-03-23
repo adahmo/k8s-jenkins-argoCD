@@ -24,9 +24,7 @@ node {
         withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhub')]) {
             app.push("${env.BUILD_NUMBER}")
     }
-        #docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-            #app.push("${env.BUILD_NUMBER}")
-        }
+        
     }
     
     stage('Trigger ManifestUpdate') {
