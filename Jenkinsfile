@@ -9,7 +9,7 @@ node {
 
     stage('Build image') {
   
-       app = docker.build("adamumj/test")
+       app = docker.build("adamumj/favor")
     }
 
     stage('Test image') {
